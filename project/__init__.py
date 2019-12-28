@@ -9,7 +9,7 @@ def create_app():
     app = Flask(__name__, static_folder='templates/',
             template_folder='templates/',)
     #data for templates files
-    app.config['SECRET_KEY'] = '9OLWxND4o83j4K4iuopO'
+    app.config['SECRET_KEY'] = 'keydb'
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 
     db.init_app(app)

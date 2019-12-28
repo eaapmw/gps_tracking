@@ -6,7 +6,7 @@ import json
 from time import sleep
 headers = {
         'Accept': 'application/json',
-        'Authorization': 'key ttn-account-v2.ziUMxRfYvzSsoo4SuRCVqKH-t5Li0F62bE_D382rGSY',
+        'Authorization': 'key ttn-account-Y',
     }
 
 
@@ -49,7 +49,7 @@ def adjust_data(data_without_raw):
     return(final_data)
 
 def send_data_to_db(final_data):
-    con = psycopg2.connect(database="postgres", user="postgres", password="admin", host="localhost", port="5432")
+    con = psycopg2.connect(database="", user="", password="", host="localhost", port="5432")
     cur = con.cursor()
     for element in final_data:
         # COLLECTING DATA

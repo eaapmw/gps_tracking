@@ -7,7 +7,7 @@ from time import sleep
 main = Blueprint('main', __name__)
 
 def grabber(device_id,lat,long):
-    con = psycopg2.connect(database="postgres", user="postgres", password="DUPAdupa1", host="localhost", port="5432")
+    con = psycopg2.connect(database="", user="", password="", host="localhost", port="5432")
     cur = con.cursor()
     cur.execute("SELECT device_id,latitude,longtitude from iotdata order by key desc limit 1")
     gps = cur.fetchall()
